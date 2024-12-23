@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 from time import sleep
 import os
 
@@ -19,6 +20,9 @@ def create_product (driver: WebDriver):
 
     price = driver.find_element(By.ID, 'product-price')
     price.send_keys(10)
+
+    type = Select(driver.find_element(By.ID, 'product-type'))
+    type.select_by_value('Electronics')
 
     cost = driver.find_element(By.ID, 'product-cost')
     cost.send_keys(9)
@@ -49,6 +53,11 @@ def edit_product (driver: WebDriver):
     alert_name = driver.switch_to.alert
     alert_name.send_keys('Producto 22')
     alert_name.accept()
+
+    sleep(1)
+    alert_type = driver.switch_to.alert
+    alert_type.send_keys('Electronic')
+    alert_type.accept()
 
     sleep(1)
     alert_price = driver.switch_to.alert

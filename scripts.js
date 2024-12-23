@@ -49,6 +49,7 @@ document
     try {
       const code = document.getElementById("product-code").value;
       const name = document.getElementById("product-name").value;
+      const type = document.getElementById("product-type").value;
       const price = parseFloat(document.getElementById("product-price").value);
       const cost = parseFloat(document.getElementById("product-cost").value);
       const stock = parseInt(document.getElementById("product-stock").value);
@@ -63,6 +64,7 @@ document
         id: nextId++,
         code,
         name,
+        type,
         price,
         cost,
         stock,
@@ -103,6 +105,7 @@ function refreshProductList() {
             </td>
             <td>${product.code}</td>
             <td>${product.name}</td>
+            <td>${product.type}</td>
             <td>$${product.price.toFixed(2)}</td>
             <td>$${product.cost.toFixed(2)}</td>
             <td>${product.stock}</td>
@@ -129,6 +132,12 @@ async function editProduct(id) {
     const name = prompt("Edit Product Name:", product.name);
     if (!name) return;
 
+    const type = prompt(
+      "Edit Product Type (Electronics, Clothing, Food, Books, Home, Sports, Other):",
+      product.type
+    );
+    if (!type) return;
+
     const price = parseFloat(prompt("Edit Product Price:", product.price));
     if (isNaN(price)) return;
 
@@ -140,6 +149,7 @@ async function editProduct(id) {
 
     product.code = code;
     product.name = name;
+    product.type = type;
     product.price = price;
     product.cost = cost;
     product.stock = stock;
