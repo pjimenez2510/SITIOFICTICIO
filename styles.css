@@ -1,0 +1,180 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+.container {
+    padding: 2rem;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Form styles */
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Image styles */
+.image-preview {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+}
+
+#product-image {
+    margin-top: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav a {
+        padding: 0.8rem 1rem;
+    }
+    
+    table, th, td {
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .form-container {
+        padding: 1rem;
+    }
+}
